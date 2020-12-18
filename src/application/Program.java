@@ -28,14 +28,14 @@ public class Program {
             System.out.print("Enter amount for withdraw: ");
             double amount = scanner.nextDouble();
             account.withdrawSaque(amount);
-            System.out.println(account);
+            System.out.println("New balance: "  + String.format("%.2f", account.getBalance()));
 
         } catch (InputMismatchException excessoes) {
             System.out.println("Invalid format");
         } catch (TratamentoDeExcessoes excessoes) {
             System.out.println("Withdraw error: " + excessoes.getMessage());
-        }catch (Exception excepion){
-            System.out.println("Fim De Programa por erro: ");
+        } catch (Exception excepion) {
+            System.out.println("Fim De Programa por erro!");
         }
         scanner.close();
     }

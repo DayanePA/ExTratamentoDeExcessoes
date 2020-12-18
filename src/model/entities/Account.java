@@ -65,16 +65,9 @@ public class Account {
         if (amount> balance) {
             throw new TratamentoDeExcessoes("Not enough balance");
         }
-
         balance -= amount;
-
     }
 
-    @Override
-    public String toString() {
-        return "New balance: " +
-                String.format("%.2f", balance);
-    }
 }
 
 
